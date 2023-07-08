@@ -1,0 +1,19 @@
+server:
+  port: 8084
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/appointmentdb
+    username: scheduleAppt
+    password: scheduleAppt
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+  application:
+    name: APPOINTMENT-SERVICE
+
+  config:
+    import: configserver:http://localhost:9296
